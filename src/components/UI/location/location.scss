@@ -1,0 +1,17 @@
+.location {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+
+
+  .location_selectedLocation {
+    padding-left: .5em;
+    cursor: pointer;
+  }
+
+  .location_locationNav {
+    background-color: white;
+    padding: 1em;
+  }
+}
