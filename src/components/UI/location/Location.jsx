@@ -22,7 +22,7 @@ const Location = () => {
     return (
         <div className='location'>
             <div
-                className='location_selectedLocation'
+                className='location__selectedLocation'
                 onClick={() => setLocationModalVisibility(true)}
             >
                 {selectedLocation.length ? selectedLocation : `select your location`}
@@ -32,7 +32,7 @@ const Location = () => {
                 title='Select your location:'
                 setVisible={() => setLocationModalVisibility(false)}
             >
-                <div className='location_locationNav'>
+                <div className='location__locationNav'>
                     <MyYMaps
                         lang={selectedLang}
                         onSubmit={onSubmitHandler}

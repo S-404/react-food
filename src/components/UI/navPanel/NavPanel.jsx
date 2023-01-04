@@ -8,16 +8,16 @@ import './navPanel.scss'
 
 const NavPanel = () => {
     return (
-        <div className='navPanel_content'>
-            <div className="navPanel_header">
-                <div className='navPanel_leftBlock'>
-                    <div className='navPanel_navPanelItem'><Logo/></div>
-                    <div className='navPanel_navPanelItem'><Location/></div>
+        <div className='navPanel__content'>
+            <div className="navPanel__header">
+                <div className='navPanel__leftBlock'>
+                    <div className='navPanel__navPanelItem'><Logo/></div>
+                    <div className='navPanel__navPanelItem'><Location/></div>
                 </div>
-                <div className='navPanel_rightBlock'>
-                    <div className='navPanel_navPanelItem'><LanguageSwitcher/></div>
-                    <div className='navPanel_navPanelItem'><NavCart/></div>
-                    <div className='navPanel_navPanelItem'><AvatarButton/></div>
+                <div className='navPanel__rightBlock'>
+                    <div className='navPanel__navPanelItem'><LanguageSwitcher/></div>
+                    <div className='navPanel__navPanelItem'><NavCart/></div>
+                    <div className='navPanel__navPanelItem'><AvatarButton/></div>
                 </div>
             </div>
         </div>

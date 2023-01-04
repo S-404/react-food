@@ -1,4 +1,4 @@
-.navPanel_content {
+.navPanel__content {
   position: fixed;
   top:0;
   left: 0;
@@ -7,7 +7,7 @@
   background-color: white;
   border-bottom: 1px solid #e0e0e0;
 
-  .navPanel_header {
+  .navPanel__header {
     width: 100%;
     height: 70px;
     display: flex;
@@ -17,17 +17,17 @@
     align-items: center;
 
 
-    .navPanel_leftBlock {
+    .navPanel__leftBlock {
       display: flex;
       flex-direction: row;
     }
 
-    .navPanel_rightBlock {
+    .navPanel__rightBlock {
       display: flex;
       flex-direction: row;
     }
 
-    .navPanel_navPanelItem {
+    .navPanel__navPanelItem {
       height: 40px;
       padding: 0 25px 0 0;
       display: flex;

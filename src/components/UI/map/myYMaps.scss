@@ -1,11 +1,11 @@
 .myYMaps {
-  .myYMaps_searchRoot {
+  .myYMaps__searchRoot {
     display: flex;
     position: relative;
     margin-bottom: 2em;
     height: 40px;
 
-    .searchRoot_searchFieldBox {
+    .searchRoot__searchFieldBox {
       flex-grow: 1;
       position: relative;
       margin-right: 1em;
@@ -22,7 +22,7 @@
         border-radius: var(--border-radius-val);
       }
 
-      .searchFieldBox_titleBox {
+      .searchFieldBox__titleBox {
         display: none;
         align-items: center;
         position: absolute;
@@ -46,7 +46,7 @@
         }
       }
 
-      .searchFieldBox_titleBox_show {
+      .searchFieldBox__titleBox_show {
         display: flex;
         border-radius: var(--border-radius-val);
       }
@@ -56,7 +56,7 @@
 
   }
 
-  .myYMaps_mapRoot {
+  .myYMaps__mapRoot {
     position: relative;
     .mapRoot_placeMark {
       position: absolute;

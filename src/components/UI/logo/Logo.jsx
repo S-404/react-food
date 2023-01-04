@@ -4,7 +4,7 @@ import logo from '../../../assets/logo/react-food-logo.svg'
 const Logo = () => {
     return (
         <div className='logo'>
-            <img className='logo_img' src={logo} alt='react-food'/>
+            <img className='logo__img' src={logo} alt='react-food'/>
         </div>
     );
 };

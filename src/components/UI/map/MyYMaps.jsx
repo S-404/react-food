@@ -72,15 +72,15 @@ export default function MyYMaps({lang, onSubmit}) {
     return (
         <YMaps query={{apikey: "29294198-6cdc-4996-a870-01e89b830f3e", lang: lang+"_RU"}}>
             <Box sx={{m: 2, width: 600}} className='myYMaps'>
-                <Box className='myYMaps_searchRoot'>
-                    <Box className='searchRoot_searchFieldBox'>
+                <Box className='myYMaps__searchRoot'>
+                    <Box className='searchRoot__searchFieldBox'>
                         <input
                             ref={searchRef}
                             placeholder="Search..."
                             disabled={!mapConstructor}
                         />
                         <Box
-                            className={`searchFieldBox_titleBox${state.title.length ? ' searchFieldBox_titleBox_show' : ''}`}
+                            className={`searchFieldBox__titleBox${state.title.length ? ' searchFieldBox__titleBox_show' : ''}`}
                         >
                             <Typography
                                 title={state.title}
@@ -96,12 +96,12 @@ export default function MyYMaps({lang, onSubmit}) {
                     <Button
                         onClick={handleSubmit}
                         disabled={Boolean(!state.title.length)}
-                        className={"searchRoot_searchSubmitBtn"}
+                        className={"searchRoot__searchSubmitBtn"}
                     >
                         Ok
                     </Button>
                 </Box>
-                <Box className="myYMaps_mapRoot">
+                <Box className="myYMaps__mapRoot">
                     <Map
                         {...mapOptions}
                         state={state}
