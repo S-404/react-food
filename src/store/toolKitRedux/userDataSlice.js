@@ -3,7 +3,8 @@ import {createSlice} from "@reduxjs/toolkit"
 
 const initialState = {
     location: "",
-    lang: "en"
+    lang: "en",
+    availableLang:  ['en','ru']
 }
 
 const userDataSlice = createSlice({
@@ -14,12 +15,11 @@ const userDataSlice = createSlice({
             state.location = action.payload
         },
         setLang: (state,action)=>{
-            const availableLang = ['en','ru']
-            const defaultLang = availableLang[0]
-            state.lang = availableLang.includes(action.payload) ?   action.payload : defaultLang
+            const defaultLang = state.availableLang[0]
+            state.lang = state.availableLang.includes(action.payload) ? action.payload : defaultLang
         }
     }
 })
 
 export default userDataSlice.reducer
-export const {setLocation} = userDataSlice.actions
+export const {setLocation, setLang} = userDataSlice.actions
