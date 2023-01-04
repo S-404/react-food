@@ -1,0 +1,23 @@
+.navCart {
+
+  .navCart__button {
+    padding: .5em 1em;
+    border-radius: var(--border-radius-val);
+    &:hover{
+      background-color: lightgray;
+      cursor: pointer;
+    }
+  }
+
+  .navCart__navCartMenu {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: .5em;
+    min-height: 400px;
+    min-width: 400px;
+    .navCartMenu__item {
+
+    }
+  }
+}

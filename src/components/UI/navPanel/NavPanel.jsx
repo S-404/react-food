@@ -2,7 +2,7 @@ import React from 'react';
 import Logo from "../logo/Logo";
 import Location from "../location/Location";
 import LanguageSwitcher from "../languageSwitcher/LanguageSwitcher";
-import CartButton from "./cart/CartButton";
+import NavCart from "./cart/NavCart";
 import AvatarButton from "./avatar/AvatarButton";
 import './navPanel.scss'
 
@@ -16,7 +16,7 @@ const NavPanel = () => {
                 </div>
                 <div className='navPanel_rightBlock'>
                     <div className='navPanel_navPanelItem'><LanguageSwitcher/></div>
-                    <div className='navPanel_navPanelItem'><CartButton/></div>
+                    <div className='navPanel_navPanelItem'><NavCart/></div>
                     <div className='navPanel_navPanelItem'><AvatarButton/></div>
                 </div>
             </div>
