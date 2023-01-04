@@ -76,8 +76,12 @@ export default function MyYMaps() {
                     <Box className='searchRoot_searchFieldBox'>
                         <input ref={searchRef} placeholder="Search..." disabled={!mapConstructor}/>
                         <Box
-                            className={'searchFieldBox_titleBox' + state.title.length ? ' searchFieldBox_titleBox_show' : ''}>
-                            <Typography title={state.title} gutterBottom={false}>
+                            className={`searchFieldBox_titleBox${state.title.length ? ' searchFieldBox_titleBox_show' : ''}`}
+                        >
+                            <Typography
+                                title={state.title}
+                                gutterBottom={false}
+                            >
                                 {state.title}
                             </Typography>
                             <IconButton onClick={handleReset}>
