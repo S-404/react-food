@@ -16,9 +16,9 @@ const LanguagesList = ({setVisibility}) => {
             className={`languageSwitcher__languagesList`}>
             {availableLang.map(item => (
                 <div
-                    id={`availableLang_listItem${item}`}
+                    key={`availableLang_listItem_${item}`}
                     className='languagesList__item'
-                    onClick={()=>langListItemClickHandler(item)}
+                    onClick={() => langListItemClickHandler(item)}
                 >
                     {item}
                     {

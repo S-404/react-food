@@ -7,7 +7,7 @@ const CartMenu = () => {
         <div className='navCart__navCartMenu'>
             {cartItems.map(item=>(
                 <div
-                    id={`cartItem_${item.id}`}
+                    key={`cartItem_${item.id}`}
                     className='navCartMenu__item'
                 >
                     {item.name}
