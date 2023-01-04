@@ -6,8 +6,13 @@
 
 
   .location_selectedLocation {
-    padding-left: .5em;
+    padding: .5em 1em;
     cursor: pointer;
+    background-color: lightblue;
+    border-radius: var(--border-radius-val);
+    &:hover{
+      background-color: lightgray;
+    }
   }
 
   .location_locationNav {
