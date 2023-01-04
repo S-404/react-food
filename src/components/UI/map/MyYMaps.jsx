@@ -22,7 +22,7 @@ const initialState = {
     center: [55.749451, 37.542824],
     zoom: 12,
 };
-export default function MyYMaps() {
+export default function MyYMaps({lang, onSubmit}) {
     const [state, setState] = useState({...initialState});
     const [mapConstructor, setMapConstructor] = useState(null);
     const mapRef = useRef(null);
@@ -30,15 +30,16 @@ export default function MyYMaps() {
 
     // submits
     const handleSubmit = () => {
-        console.log({title: state.title, center: mapRef.current.getCenter()});
+        if(state.title){
+            // console.log({title: state.title, center: mapRef.current.getCenter()});
+            onSubmit(state.title)
+        }
     };
 
     // reset state & search
     const handleReset = () => {
         setState({...initialState});
         searchRef.current.value = "";
-        mapRef.current.setCenter(initialState.center);
-        mapRef.current.setZoom(initialState.zoom);
     };
 
     // search popup
@@ -68,13 +69,16 @@ export default function MyYMaps() {
         });
     };
 
-    // RENDER
     return (
-        <YMaps query={{apikey: "29294198-6cdc-4996-a870-01e89b830f3e", lang: "en_RU"}}>
+        <YMaps query={{apikey: "29294198-6cdc-4996-a870-01e89b830f3e", lang: lang+"_RU"}}>
             <Box sx={{m: 2, width: 600}} className='myYMaps'>
                 <Box className='myYMaps_searchRoot'>
                     <Box className='searchRoot_searchFieldBox'>
-                        <input ref={searchRef} placeholder="Search..." disabled={!mapConstructor}/>
+                        <input
+                            ref={searchRef}
+                            placeholder="Search..."
+                            disabled={!mapConstructor}
+                        />
                         <Box
                             className={`searchFieldBox_titleBox${state.title.length ? ' searchFieldBox_titleBox_show' : ''}`}
                         >
@@ -89,8 +93,11 @@ export default function MyYMaps() {
                             </IconButton>
                         </Box>
                     </Box>
-                    <Button onClick={handleSubmit} disabled={Boolean(!state.title.length)}
-                            className={"searchRoot_searchSubmitBtn"}>
+                    <Button
+                        onClick={handleSubmit}
+                        disabled={Boolean(!state.title.length)}
+                        className={"searchRoot_searchSubmitBtn"}
+                    >
                         Ok
                     </Button>
                 </Box>
