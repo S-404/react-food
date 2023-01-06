@@ -1,11 +1,11 @@
 import React from "react";
 import "./App.css"
-import NavPanel from "./components/UI/navPanel/NavPanel";
+import DefaultLayout from "./components/defaultLayout/DefaultLayout";
 
 function App() {
     return (
         <div className="App">
-            <NavPanel/>
+            <DefaultLayout/>
         </div>
     );
 }
