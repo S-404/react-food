@@ -4,18 +4,20 @@ import './menuByCategories.scss'
 import {useFilteredMenu} from "../../../hooks/restaurantMenu/useMenu";
 import {setMenuRef} from "../../../store/toolKitRedux/restaurantSlice";
 import {useDispatch} from "react-redux";
+import useOnScreen from "../../../hooks/useOnScreen";
 
 const MenuByCategories = ({category, menu, popular}) => {
 
     const ref = useRef(null)
+    const isVisible = useOnScreen(ref)
 
     const dispatch = useDispatch()
     const filteredMenu = useFilteredMenu(menu, 'category', category)
     const menuItems = category === 'Popular' ? popular : filteredMenu
 
-    useEffect(()=>{
-       if(ref)  dispatch(setMenuRef({name:category,ref:ref.current.id}))
-    },[ref])
+    useEffect(() => {
+        if (ref) dispatch(setMenuRef({name: category, ref: ref.current.id}))
+    }, [ref])
 
     if (!menuItems.length) return null
 
@@ -31,6 +33,7 @@ const MenuByCategories = ({category, menu, popular}) => {
                     <ProductCard
                         key={`filteredMenu_productCard_${item.id}`}
                         product={item}
+                        isVisible={isVisible}
                     />
                 ))}
             </div>

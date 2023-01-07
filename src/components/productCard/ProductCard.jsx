@@ -1,7 +1,7 @@
 import React from 'react';
 import './productCard.scss'
 
-const ProductCard = ({product}) => {
+const ProductCard = ({product,isVisible}) => {
 
     const productDataClickHandler = () => {
 
@@ -9,6 +9,9 @@ const ProductCard = ({product}) => {
     const buttonClickHandler = () => {
 
     }
+
+    if(!isVisible) return <div className='productCard'/>
+
     return (
         <div className='productCard'>
             <div className='productCard__productData'
