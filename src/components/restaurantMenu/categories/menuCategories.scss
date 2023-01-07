@@ -1,0 +1,24 @@
+.menuCategories {
+  margin-right: 20px;
+
+  .menuCategories__header {
+
+  }
+
+  .menuCategories__categoriesList {
+    .categoriesList {
+      .categoriesList__item {
+        padding: 1em 1em;
+        border-radius: var(--border-radius-val);
+
+        &:hover {
+          background-color: #f3f3f3;
+          cursor: pointer;
+        }
+        &:active{
+          background-color: #f0f0f0;
+        }
+      }
+    }
+  }
+}
