@@ -1,16 +1,20 @@
 import React from 'react';
 import './productCard.scss'
+import {useDispatch} from "react-redux";
+import {setProductInfoVisible} from "../../store/toolKitRedux/modalsSlice";
+import {setSelectedProduct} from "../../store/toolKitRedux/restaurantSlice";
 
-const ProductCard = ({product,isVisible}) => {
-
+const ProductCard = ({product, isVisible}) => {
+    const dispatch = useDispatch()
     const productDataClickHandler = () => {
-
+        dispatch(setProductInfoVisible(true))
+        dispatch(setSelectedProduct(product))
     }
     const buttonClickHandler = () => {
 
     }
 
-    if(!isVisible) return <div className='productCard'/>
+    if (!isVisible) return <div className='productCard'/>
 
     return (
         <div className='productCard'>
