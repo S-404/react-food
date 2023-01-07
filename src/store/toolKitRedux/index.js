@@ -3,6 +3,7 @@ import toolKitReducer from "./toolKitReducer"
 import modalsSlice from "./modalsSlice";
 import userDataSlice from "./userDataSlice";
 import cartSlice from "./cartSlice";
+import restaurantSlice from "./restaurantSlice";
 
 
 const rootReducer = combineReducers({
@@ -10,6 +11,7 @@ const rootReducer = combineReducers({
     modals: modalsSlice,
     userData: userDataSlice,
     cart: cartSlice,
+    restaurant: restaurantSlice,
 })
 
 export const store = configureStore({
