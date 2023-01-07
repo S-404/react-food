@@ -3,6 +3,7 @@ import './productCard.scss'
 import {useDispatch} from "react-redux";
 import {setProductInfoVisible} from "../../store/toolKitRedux/modalsSlice";
 import {setSelectedProduct} from "../../store/toolKitRedux/restaurantSlice";
+import Button from "../UI/buttons/button/Button";
 
 const ProductCard = ({product, isVisible}) => {
     const dispatch = useDispatch()
@@ -29,12 +30,10 @@ const ProductCard = ({product, isVisible}) => {
                 <div className='productCard__weight'>{product.weight}</div>
             </div>
             <div className='productCard__buttons'>
-                <div
-                    className='productCard__button'
+                <Button
                     onClick={buttonClickHandler}
-                >
-                    + Add
-                </div>
+                    text={'+ Add'}
+                />
             </div>
 
 
