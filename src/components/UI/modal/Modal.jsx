@@ -17,7 +17,7 @@ const Modal = ({children, visible, setVisible, title}) => {
                 onClick={(e) => e.stopPropagation()}
             >
                 <div className={classes.myModalHeader}>
-                    <h5>{title}</h5>
+                    <h3>{title}</h3>
                     <CloseButton onClick={() => setVisible(false)}/>
                 </div>
 
