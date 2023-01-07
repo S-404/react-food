@@ -1,8 +1,8 @@
 import React from 'react';
-
+import './restaurantCard.scss'
 const RestaurantCard = () => {
     return (
-        <div>
+        <div className='restaurantCard'>
             restaurant card
         </div>
     );

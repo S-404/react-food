@@ -1,8 +1,8 @@
 import React from 'react';
-
+import './restaurantOffer.scss'
 const RestaurantOffer = () => {
     return (
-        <div>
+        <div className='restaurantOffer'>
             offer
         </div>
     );
