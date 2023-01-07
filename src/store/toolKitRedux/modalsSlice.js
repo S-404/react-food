@@ -3,7 +3,8 @@ import {createSlice} from "@reduxjs/toolkit"
 
 const initialState = {
     locationVisible: false,
-    navCartMenu: false
+    navCartMenu: false,
+    productInfo: false,
 }
 
 const modalsSlice = createSlice({
@@ -15,9 +16,16 @@ const modalsSlice = createSlice({
         },
         setNavCartMenuVisible: (state, action) => {
             state.navCartMenu = action.payload
+        },
+        setProductInfoVisible: (state, action) => {
+            state.productInfo = action.payload
         }
     }
 })
 
 export default modalsSlice.reducer
-export const {setLocationVisible, setNavCartMenuVisible} = modalsSlice.actions
+export const {
+    setLocationVisible,
+    setNavCartMenuVisible,
+    setProductInfoVisible
+} = modalsSlice.actions

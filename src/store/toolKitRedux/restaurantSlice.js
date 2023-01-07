@@ -3,7 +3,8 @@ import {createSlice} from "@reduxjs/toolkit"
 
 const initialState = {
     menu: [],
-    refs: {}
+    refs: {},
+    selectedProduct: {}
 }
 
 const restaurantSlice = createSlice({
@@ -15,9 +16,12 @@ const restaurantSlice = createSlice({
         },
         setMenuRef: (state, action) => {
             state.refs[action.payload.name] = action.payload.ref
+        },
+        setSelectedProduct: (state, action) => {
+            state.selectedProduct = action.payload
         }
     }
 })
 
 export default restaurantSlice.reducer
-export const {setMenu,setMenuRef} = restaurantSlice.actions
+export const {setMenu, setMenuRef,setSelectedProduct} = restaurantSlice.actions
