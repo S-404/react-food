@@ -10,7 +10,9 @@ export const useMenuCategories = (menu) => {
                     resultArray.push(item.category)
                 }
             }
+            resultArray.sort()
+            resultArray.unshift('Popular')
         }
-        return resultArray.sort()
+        return  resultArray
     },[menu])
 }
