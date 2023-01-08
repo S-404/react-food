@@ -1,0 +1,23 @@
+[
+  {
+    "id": 0,
+    "name": "Sushi!Wok!",
+    "rating": 4.2,
+    "description": "Sushi restaurant is also called sushisho or sushiten and is a restaurant which serves Japanese food sushi.",
+    "picture": "https://lh4.googleusercontent.com/RBmZmZ3OVWPeak8jlJ0l49_KPF8WKAeJlygMtxpQP9ZHD--dIvyMeKmzpSTUwhb4bIY=w2400"
+  },
+  {
+    "id": 1,
+    "name": "borsch.",
+    "rating": 4.4,
+    "description": "There is a good assortment of breakfasts in Russian traditions.",
+    "picture": "https://lh4.googleusercontent.com/4Jr5oLKv6_9MkPI_7rJLdk8z0Q8_jZWUyAhenIufQdAl1wvnbFO4Xzsbi1RX6ovN3Mk=w2400"
+  },
+  {
+    "id": 2,
+    "name": "Doner",
+    "rating": 4.9,
+    "description": "Be sure to take delicious shawarma and good grilled chicken here.",
+    "picture": "https://lh6.googleusercontent.com/-YKF9APVdEjkrx1JVqT6aLPzDcP7rGONXC9_4x_sg24bA_A9SMhe-ikTs390PfQdFDo=w2400"
+  }
+]
