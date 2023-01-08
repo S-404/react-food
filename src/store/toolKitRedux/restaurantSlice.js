@@ -6,7 +6,8 @@ const initialState = {
     menu: [],
     refs: {},
     selectedProduct: {},
-    data:{},
+    data: {},
+    offer: {},
 }
 
 const restaurantSlice = createSlice({
@@ -24,9 +25,12 @@ const restaurantSlice = createSlice({
         },
         setSelectedProduct: (state, action) => {
             state.selectedProduct = action.payload
-        }
+        },
+        setOffer: (state, action) => {
+            state.offer = action.payload
+        },
     }
 })
 
 export default restaurantSlice.reducer
-export const {setMenu, setMenuRef,setSelectedProduct,setData} = restaurantSlice.actions
+export const {setMenu, setMenuRef, setSelectedProduct, setData, setOffer} = restaurantSlice.actions

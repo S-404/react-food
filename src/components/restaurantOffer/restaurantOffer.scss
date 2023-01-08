@@ -1,6 +1,26 @@
 .restaurantOffer{
   height: 50px;
-  border: 1px solid gray;
+  border: 1px solid #3cc93c;
   border-radius: var(--border-radius-val);
   margin-top: 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  color: green;
+  background-color: #b7f6c2;
+  .restaurantOffer__icon{
+    margin: 1em;
+  }
+  .restaurantOffer__message{
+
+    .restaurantOffer__header{
+      font-weight: bold;
+      font-size: 0.8em;
+    }
+    .restaurantOffer__description{
+      font-style: italic;
+      font-size: 0.9em;
+    }
+  }
 }
