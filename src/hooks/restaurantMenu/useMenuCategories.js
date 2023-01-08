@@ -11,7 +11,6 @@ export const useMenuCategories = (menu) => {
                 }
             }
             resultArray.sort()
-            resultArray.unshift('Popular')
         }
         return  resultArray
     },[menu])
