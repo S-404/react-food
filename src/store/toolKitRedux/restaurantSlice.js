@@ -2,9 +2,11 @@ import {createSlice} from "@reduxjs/toolkit"
 
 
 const initialState = {
+    selectedRestaurantId: 1, // default 1 , until the restaurant selection page is implemented
     menu: [],
     refs: {},
-    selectedProduct: {}
+    selectedProduct: {},
+    data:{},
 }
 
 const restaurantSlice = createSlice({
@@ -13,6 +15,9 @@ const restaurantSlice = createSlice({
     reducers: {
         setMenu: (state, action) => {
             state.menu = action.payload
+        },
+        setData: (state, action) => {
+            state.data = action.payload
         },
         setMenuRef: (state, action) => {
             state.refs[action.payload.name] = action.payload.ref
@@ -24,4 +29,4 @@ const restaurantSlice = createSlice({
 })
 
 export default restaurantSlice.reducer
-export const {setMenu, setMenuRef,setSelectedProduct} = restaurantSlice.actions
+export const {setMenu, setMenuRef,setSelectedProduct,setData} = restaurantSlice.actions
