@@ -28,7 +28,7 @@ const ProductCard = ({product, isVisible}) => {
                 <ProductCardImg product={product}/>
                 </div>
                 <div className='productCard__price'>
-                    {`${product.price} ${storeCurrency}`}
+                    {`${storeCurrency}${product.price}`}
                 </div>
                 <div className='productCard__name'>{product.name}</div>
                 <div className='productCard__weight'>{product.weight}</div>
@@ -36,7 +36,7 @@ const ProductCard = ({product, isVisible}) => {
             <div className='productCard__buttons'>
                 <Button
                     onClick={buttonClickHandler}
-                    text={'+ Add'}
+                    text={'+ Добавить'}
                 />
             </div>
 

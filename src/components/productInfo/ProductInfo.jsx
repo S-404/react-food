@@ -20,7 +20,7 @@ const ProductInfo = () => {
                 <div className='productInfoFooter__buttons'>
                     <div className='buttons__button'>
                         <Button
-                            text={'+ Add'}
+                            text={'+ Добавить'}
                             onClick={addButtonClickHandler}
                         />
                     </div>

@@ -18,7 +18,7 @@ const NavCart = () => {
                 className='navCart__button'
                 onClick={() => setVisible(!navCartMenuVisibility)}
             >
-                Cart
+                Корзина
             </div>
 
             <Modal

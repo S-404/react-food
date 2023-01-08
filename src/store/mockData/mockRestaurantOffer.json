@@ -2,19 +2,19 @@
   {
     "id": 0,
     "restaurantId": 0,
-    "name": "Dish as a gift!",
-    "description": "Sandwich Classic Italian as a gift when ordering from 1199₽ excluding delivery"
+    "name": "Блюдо в подарок!",
+    "description": "Сэндвич Классический итальянский в подарок при заказе от 1199₽ без учета доставки"
   },
   {
     "id": 1,
     "restaurantId": 1,
-    "name": "Cashback 5%",
-    "description": "Cashback from the order - 5% back to the card"
+    "name": "Кэшбэк 5%",
+    "description": "Кэшбэк с заказа - 5% обратно на карту"
   },
   {
     "id": 2,
     "restaurantId": 2,
-    "name": "Free delivery",
-    "description": "for any order over ₽599"
+    "name": "Бесплатная доставка",
+    "description": "при любом заказе от ₽599"
   }
 ]

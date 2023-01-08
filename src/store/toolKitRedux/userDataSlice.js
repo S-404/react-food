@@ -3,7 +3,7 @@ import {createSlice} from "@reduxjs/toolkit"
 
 const initialState = {
     location: "",
-    lang: "en",
+    lang: "ru",
     availableLang:  ['en','ru']
 }
 

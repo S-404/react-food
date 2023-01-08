@@ -25,11 +25,15 @@ const Location = () => {
                 className='location__selectedLocation'
                 onClick={() => setLocationModalVisibility(true)}
             >
-                {selectedLocation.length ? selectedLocation : `select your location`}
+                {
+                    selectedLocation.length ?
+                        selectedLocation :
+                        `Выберите ваше местоположение`
+                }
             </div>
             <Modal
                 visible={locationVisible}
-                title='Select your location:'
+                title='Выберите ваше местоположение:'
                 setVisible={() => setLocationModalVisibility(false)}
             >
                 <div className='location__locationNav'>

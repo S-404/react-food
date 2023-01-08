@@ -9,6 +9,7 @@ import {useDispatch, useSelector} from "react-redux";
 
 const MenuContent = () => {
     const productInfoVisibility = useSelector(state => state.modals.productInfo)
+    const selectedProduct = useSelector(state => state.restaurant.selectedProduct)
     const dispatch = useDispatch()
     const setProductInfoVisibility = (value) => {
         dispatch(setProductInfoVisible(value))
@@ -22,7 +23,7 @@ const MenuContent = () => {
             <Modal
                 children={<ProductInfo/>}
                 setVisible={setProductInfoVisibility}
-                title={'Description'}
+                title={selectedProduct.name}
                 visible={productInfoVisibility}
             />
         </div>

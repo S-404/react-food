@@ -36,7 +36,7 @@ const RestaurantMenu = () => {
                 <MenuContent/>
             </div>
             <div className='RestaurantMenu__cart'>
-                cart
+                Корзина
             </div>
 
         </div>
