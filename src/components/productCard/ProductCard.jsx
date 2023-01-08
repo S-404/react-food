@@ -4,6 +4,7 @@ import {useDispatch} from "react-redux";
 import {setProductInfoVisible} from "../../store/toolKitRedux/modalsSlice";
 import {setSelectedProduct} from "../../store/toolKitRedux/restaurantSlice";
 import Button from "../UI/buttons/button/Button";
+import ProductCardImg from "./ProductCardImg";
 
 const ProductCard = ({product, isVisible}) => {
     const dispatch = useDispatch()
@@ -23,7 +24,7 @@ const ProductCard = ({product, isVisible}) => {
                  onClick={productDataClickHandler}
             >
                 <div className='productCard__imageDiv'>
-                    <img src={product.picture} alt={product.name}/>
+                <ProductCardImg product={product}/>
                 </div>
                 <div className='productCard__price'>{product.price}</div>
                 <div className='productCard__name'>{product.name}</div>

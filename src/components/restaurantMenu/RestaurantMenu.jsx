@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react';
-import {useDispatch} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import {useFetching} from "../../hooks/useFetching";
 import {setMenu} from "../../store/toolKitRedux/restaurantSlice";
 import MenuCategories from "./categories/MenuCategories";
@@ -9,11 +9,11 @@ import MenuContent from "./content/MenuContent";
 
 
 const RestaurantMenu = () => {
-
+    const selectedRestaurantId = useSelector(state => state.restaurant.selectedRestaurantId)
     const dispatch = useDispatch()
     const [fetchMenu, isFetchMenuLoading] = useFetching(
         async () => {
-            const responseData = await RestaurantService.getRestaurantMenu()
+            const responseData = await RestaurantService.getRestaurantMenu(selectedRestaurantId)
             dispatch(setMenu(responseData))
         }
     )
