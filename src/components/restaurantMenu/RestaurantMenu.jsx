@@ -6,6 +6,7 @@ import MenuCategories from "./categories/MenuCategories";
 import RestaurantService from "../../api/services/RestaurantService";
 import './restaurantMenu.scss'
 import MenuContent from "./content/MenuContent";
+import Cart from "../cart/Cart";
 
 
 const RestaurantMenu = () => {
@@ -36,7 +37,7 @@ const RestaurantMenu = () => {
                 <MenuContent/>
             </div>
             <div className='RestaurantMenu__cart'>
-                Корзина
+                <Cart/>
             </div>
 
         </div>
