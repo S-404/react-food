@@ -5,6 +5,7 @@ import {setProductInfoVisible} from "../../store/toolKitRedux/modalsSlice";
 import {setSelectedProduct} from "../../store/toolKitRedux/restaurantSlice";
 import ProductCardImg from "./ProductCardImg";
 import ProductAddButton from "../productAddButton/ProductAddButton";
+import ProductCounter from "../productCounter/ProductCounter";
 import useProductInCart from "../../hooks/useProductInCart";
 
 const ProductCard = ({product, isVisible}) => {
@@ -15,7 +16,7 @@ const ProductCard = ({product, isVisible}) => {
         dispatch(setProductInfoVisible(true))
         dispatch(setSelectedProduct(product))
     }
-    const isProductInCart = useProductInCart(product, cartItems)
+    const productInCart = useProductInCart(product, cartItems)
 
     if (!isVisible) return <div className='productCard'/>
 
@@ -34,8 +35,8 @@ const ProductCard = ({product, isVisible}) => {
                 <div className='productCard__weight'>{product.weight}</div>
             </div>
             <div className='productCard__buttons'>
-                {isProductInCart ?
-                    <div>counter</div>
+                {productInCart.id ?
+                    <ProductCounter product={productInCart}/>
                     :
                     <ProductAddButton product={product}/>
                 }

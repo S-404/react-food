@@ -2,9 +2,12 @@ import {useMemo} from "react";
 
 export default function useProductInCart(product, cartItems) {
     return useMemo(() => {
-        let result = false;
+        let result = {};
         if (product.id && cartItems.length) {
-            result = cartItems.findIndex(item => item.id === product.id) !== -1
+            let index = cartItems.findIndex(item => item.id === product.id)
+            if (index !== -1) {
+                result = cartItems[index]
+            }
         }
         return result
     }, [cartItems])
