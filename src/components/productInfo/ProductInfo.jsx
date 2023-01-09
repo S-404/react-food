@@ -13,7 +13,7 @@ const ProductInfo = () => {
         <div className='productInfo'>
             <div className='productInfo__info'>
                 <div className='info__description'>
-                    {selectedProduct.description}
+                    <p dangerouslySetInnerHTML={{__html: selectedProduct.description}}/>
                 </div>
             </div>
             <div className='productInfo__productInfoFooter'>
