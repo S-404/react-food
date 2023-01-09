@@ -3,19 +3,19 @@ import './productCard.scss'
 import {useDispatch, useSelector} from "react-redux";
 import {setProductInfoVisible} from "../../store/toolKitRedux/modalsSlice";
 import {setSelectedProduct} from "../../store/toolKitRedux/restaurantSlice";
-import Button from "../UI/buttons/button/Button";
 import ProductCardImg from "./ProductCardImg";
+import ProductAddButton from "../productAddButton/ProductAddButton";
+import useProductInCart from "../../hooks/useProductInCart";
 
 const ProductCard = ({product, isVisible}) => {
     const storeCurrency = useSelector(state => state.restaurant.data?.currency)
+    const cartItems = useSelector(state => state.cart.cartItems)
     const dispatch = useDispatch()
     const productDataClickHandler = () => {
         dispatch(setProductInfoVisible(true))
         dispatch(setSelectedProduct(product))
     }
-    const buttonClickHandler = () => {
-
-    }
+    const isProductInCart = useProductInCart(product, cartItems)
 
     if (!isVisible) return <div className='productCard'/>
 
@@ -25,7 +25,7 @@ const ProductCard = ({product, isVisible}) => {
                  onClick={productDataClickHandler}
             >
                 <div className='productCard__imageDiv'>
-                <ProductCardImg product={product}/>
+                    <ProductCardImg product={product}/>
                 </div>
                 <div className='productCard__price'>
                     {`${storeCurrency}${product.price}`}
@@ -34,10 +34,11 @@ const ProductCard = ({product, isVisible}) => {
                 <div className='productCard__weight'>{product.weight}</div>
             </div>
             <div className='productCard__buttons'>
-                <Button
-                    onClick={buttonClickHandler}
-                    text={'+ Добавить'}
-                />
+                {isProductInCart ?
+                    <div>counter</div>
+                    :
+                    <ProductAddButton product={product}/>
+                }
             </div>
 
 
