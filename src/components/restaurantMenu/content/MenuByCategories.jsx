@@ -12,7 +12,7 @@ const MenuByCategories = ({category, menuItems}) => {
     const dispatch = useDispatch()
 
     useEffect(() => {
-        if (ref) dispatch(setMenuRef({name: category, ref: ref.current.id}))
+        if (ref) dispatch(setMenuRef({name: category, ref: ref.current}))
     }, [ref])
 
     if (!menuItems.length) return null
