@@ -1,17 +1,15 @@
 import React from 'react';
-import {useSelector} from "react-redux";
-import CartItem from "./CartItem";
-
+import CartHeader from "./cartHeader/CartHeader";
+import CartItems from "./cartItems/CartItems";
+import CartBottom from "./cartBottom/CartBottom";
+import './cart.scss'
 const Cart = () => {
-    const cartItems = useSelector(state => state.cart.cartItems)
+
     return (
-        <div>
-            {cartItems.map(item => (
-                <CartItem
-                    key={`cartItem_${item.id}`}
-                    item={item}
-                />
-            ))}
+        <div className='cart'>
+            <CartHeader/>
+            <CartItems/>
+            <CartBottom/>
         </div>
     );
 };

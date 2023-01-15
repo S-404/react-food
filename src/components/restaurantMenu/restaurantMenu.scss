@@ -2,7 +2,6 @@
   display: flex;
   justify-content: center;
 
-
   .RestaurantMenu__leftMenu {
     display: block; //todo @media block/none
     //border: 1px solid lightgray;
@@ -24,12 +23,10 @@
 
   .RestaurantMenu__cart {
     display: block; //todo @media block/none
-    border: 1px solid lightgray;
     top:90px;
-    width: 320px;
+    width: 380px;
     height: calc(100vh - 130px);
     position: sticky;
-    margin-left: 32px;
-    margin-bottom: 32px;
+    margin: 0 1em .5em;
   }
 }

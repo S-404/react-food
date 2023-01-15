@@ -1,0 +1,29 @@
+.cart {
+  position: relative;
+  height: 100%;
+  .cart__cartHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: .1em .5em;
+    .cartHeader__header {
+
+    }
+
+    .cartHeader__headerButton {
+
+    }
+  }
+
+  .cart__cartItems {
+    height: 90%;
+    overflow-y:scroll;
+
+  }
+
+  .cart__cartBottom {
+
+  }
+}
