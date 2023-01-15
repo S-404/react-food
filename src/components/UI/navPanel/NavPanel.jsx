@@ -4,6 +4,7 @@ import Location from "../location/Location";
 import NavCart from "./cart/NavCart";
 import AvatarButton from "./avatar/AvatarButton";
 import './navPanel.scss'
+import NavMenuButton from "./menu/NavMenuButton";
 
 const NavPanel = () => {
     return (
@@ -11,6 +12,7 @@ const NavPanel = () => {
             <div className="navPanel__header">
                 <div className='navPanel__leftBlock'>
                     <div className='navPanel__navPanelItem'><Logo/></div>
+                    <div className='navPanel__navPanelItem'><NavMenuButton/></div>
                     <div className='navPanel__navPanelItem'><Location/></div>
                 </div>
                 <div className='navPanel__rightBlock'>

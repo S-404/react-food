@@ -5,6 +5,7 @@ const initialState = {
     locationVisible: false,
     navCartMenu: false,
     productInfo: false,
+    navMenu: false
 }
 
 const modalsSlice = createSlice({
@@ -17,6 +18,9 @@ const modalsSlice = createSlice({
         setNavCartMenuVisible: (state, action) => {
             state.navCartMenu = action.payload
         },
+        setNavMenuVisible: (state, action) => {
+            state.navMenu = action.payload
+        },
         setProductInfoVisible: (state, action) => {
             state.productInfo = action.payload
         }
@@ -27,5 +31,6 @@ export default modalsSlice.reducer
 export const {
     setLocationVisible,
     setNavCartMenuVisible,
-    setProductInfoVisible
+    setProductInfoVisible,
+    setNavMenuVisible
 } = modalsSlice.actions
