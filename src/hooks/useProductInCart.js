@@ -1,5 +1,13 @@
 import {useMemo} from "react";
 
+export function useTotalAmount(cartItems) {
+    return useMemo(() => {
+        return cartItems
+            .reduce((prev, curr) => prev + (curr.price * curr.cartItemQty)
+                , 0)
+    }, [cartItems])
+}
+
 export default function useProductInCart(product, cartItems) {
     return useMemo(() => {
         let result = {};

@@ -36,7 +36,7 @@ const ProductCard = ({product, isVisible, showAmount}) => {
                 </div>
                 <div className='productData__textInfo'>
                     <span className='textInfo__price'>
-                        {`${storeCurrency}${totalPrice}`}
+                        {`${totalPrice} ${storeCurrency}`}
                     </span>
                     <span className='textInfo__name'>{product.name}</span>
                     <span className='textInfo__weight'>{product.weight}</span>
