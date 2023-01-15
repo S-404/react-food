@@ -4,18 +4,19 @@
 
   .RestaurantMenu__leftMenu {
     display: block; //todo @media block/none
-    //border: 1px solid lightgray;
     top:90px;
     width: 220px;
     height: calc(100vh - 130px);
     position: sticky;
-    //margin-left: 32px;
-    margin-bottom: 32px;
   }
 
   .RestaurantMenu__content {
     width: 892px; //todo @media 1200/800
     max-width: 1000px;
+    height: calc(100vh - 130px);
+    overflow-y: scroll;
+    padding-right: .5em;
+
     .RestaurantMenu__contentItem{
       height: 100px;
     }
