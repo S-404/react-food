@@ -31,3 +31,10 @@
     justify-content: center;
     align-items: flex-start;
 }
+@media screen and (max-width: 800px){
+
+    .myModalContent {
+        margin-top: 0;
+        width: 100%;
+    }
+}

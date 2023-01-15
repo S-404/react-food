@@ -30,7 +30,6 @@
     display: block; //todo @media block/none
     top:90px;
     width: 380px;
-    height: calc(100vh - 130px);
     position: sticky;
     margin: 0 1em .5em;
   }
@@ -52,4 +51,12 @@
     }
   }
 
+}
+
+@media screen and (max-width: 800px) {
+  .RestaurantMenu{
+    .RestaurantMenu__leftMenu {
+      display: none;
+    }
+  }
 }

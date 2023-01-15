@@ -1,10 +1,14 @@
 import React from 'react';
 import './logo.scss'
-import logo from '../../../assets/logo/react-food-logo.svg'
+import reactFoodLogo from '../../../assets/logo/reactFoodLogo_.png'
+import reactFoodLogoMini from '../../../assets/logo/reactFoodLogo-mini.png'
+import useMatchMedia from "../../../hooks/useMatchMedia";
+
 const Logo = () => {
+    const matches800px = useMatchMedia(800)
     return (
         <div className='logo'>
-            <img className='logo__img' src={logo} alt='react-food'/>
+            <img className='logo__img' src={matches800px ? reactFoodLogoMini : reactFoodLogo} alt='react-food'/>
         </div>
     );
 };

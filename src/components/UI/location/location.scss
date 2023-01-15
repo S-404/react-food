@@ -10,6 +10,8 @@
     cursor: pointer;
     background-color: lightblue;
     border-radius: var(--border-radius-val);
+    display: flex;
+    align-items: center;
     &:hover{
       background-color: lightgray;
     }

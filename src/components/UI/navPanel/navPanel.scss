@@ -1,6 +1,6 @@
 .navPanel__content {
   position: fixed;
-  top:0;
+  top: 0;
   left: 0;
   width: 100%;
   padding: 0 20px;
@@ -35,4 +35,15 @@
       align-items: center;
     }
   }
+}
+
+@media screen and (max-width: 800px) {
+  .navPanel__content {
+    .navPanel__header {
+      .navPanel__navPanelItem {
+        padding: .1em;
+      }
+    }
+  }
+
 }

@@ -1,5 +1,19 @@
 .logo{
+  display: flex;
+  max-height: 70px;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
   .logo__img{
-    width: 120px;
+    height: 110px;
   }
+}
+
+@media screen and (max-width: 800px) {
+    .logo{
+      width: 50px;
+     .logo__img{
+       height: 50px;
+     }
+    }
 }
