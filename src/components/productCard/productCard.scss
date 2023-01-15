@@ -11,10 +11,11 @@
   min-height: 300px;
 
   .productCard__productData {
-    &:hover{
+    &:hover {
       cursor: pointer;
     }
-    .productCard__imageDiv {
+
+    .productData__imageDiv {
       img {
         width: calc(170px - 1em);
         border-radius: var(--border-radius-val);
@@ -22,21 +23,26 @@
       }
     }
 
-    .productCard__price {
-      font-size: 1.2em;
+    .productData__textInfo {
+      display: flex;
+      flex-direction: column;
+      .textInfo__price {
+        font-size: 1.2em;
+      }
+
+      .textInfo__name {
+        font-size: 0.9em;
+      }
+
+      .textInfo__weight {
+        font-size: 0.8em;
+        color: gray;
+      }
     }
 
-    .productCard__name {
-      font-size: 0.9em;
-    }
-
-    .productCard__weight {
-      font-size: 0.8em;
-      color: gray;
-    }
   }
 
-  .productCard__buttons{
+  .productCard__buttons {
     margin-top: 1em;
 
   }

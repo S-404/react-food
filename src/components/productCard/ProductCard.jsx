@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useMemo} from 'react';
 import './productCard.scss'
 import {useDispatch, useSelector} from "react-redux";
 import {setProductInfoVisible} from "../../store/toolKitRedux/modalsSlice";
@@ -8,7 +8,7 @@ import ProductAddButton from "../productAddButton/ProductAddButton";
 import ProductCounter from "../productCounter/ProductCounter";
 import useProductInCart from "../../hooks/useProductInCart";
 
-const ProductCard = ({product, isVisible}) => {
+const ProductCard = ({product, isVisible, showAmount}) => {
     const storeCurrency = useSelector(state => state.restaurant.data?.currency)
     const cartItems = useSelector(state => state.cart.cartItems)
     const dispatch = useDispatch()
@@ -18,6 +18,12 @@ const ProductCard = ({product, isVisible}) => {
     }
     const productInCart = useProductInCart(product, cartItems)
 
+    const totalPrice = useMemo(() => {
+        return showAmount && productInCart.id ?
+            productInCart.price * product.cartItemQty :
+            product.price
+    }, [productInCart.cartItemQty])
+
     if (!isVisible) return <div className='productCard'/>
 
     return (
@@ -25,14 +31,16 @@ const ProductCard = ({product, isVisible}) => {
             <div className='productCard__productData'
                  onClick={productDataClickHandler}
             >
-                <div className='productCard__imageDiv'>
+                <div className='productData__imageDiv'>
                     <ProductCardImg product={product}/>
                 </div>
-                <div className='productCard__price'>
-                    {`${storeCurrency}${product.price}`}
+                <div className='productData__textInfo'>
+                    <span className='textInfo__price'>
+                        {`${storeCurrency}${totalPrice}`}
+                    </span>
+                    <span className='textInfo__name'>{product.name}</span>
+                    <span className='textInfo__weight'>{product.weight}</span>
                 </div>
-                <div className='productCard__name'>{product.name}</div>
-                <div className='productCard__weight'>{product.weight}</div>
             </div>
             <div className='productCard__buttons'>
                 {productInCart.id ?
