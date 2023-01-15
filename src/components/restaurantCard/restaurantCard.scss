@@ -3,10 +3,12 @@
   width: 100%;
   height: 300px;
   position: relative;
+  z-index: -1;
   img {
     object-fit: cover;
     width: 100%;
     border-radius: 2em;
+
   }
 
   .restaurantCard__infoLayout {
@@ -26,17 +28,27 @@
       padding: .5em;
       margin: .5em;
       max-width: 40%;
+
       .infoLayout__name {
         font-weight: 700;
         font-size: 50px;
         position: relative;
         overflow: hidden;
       }
-      .infoLayout__description{
+
+      .infoLayout__description {
         margin: 1em 0;
       }
     }
+  }
+}
 
-
+@media screen and (max-width: 1000px) {
+  .restaurantCard{
+    .restaurantCard__infoLayout{
+      .infoLayout__info{
+        max-width: 100%;
+      }
+    }
   }
 }
