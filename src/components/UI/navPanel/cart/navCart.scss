@@ -1,10 +1,16 @@
 .navCart {
-
+  display: none;
   .navCart__button {
     padding: .5em 1em;
+    border: 1px solid #eeeeee;
     border-radius: var(--border-radius-val);
+    background-color: yellow;
+    font-weight: 600;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
     &:hover{
-      background-color: lightgray;
+      background-color: #ffe505;
       cursor: pointer;
     }
   }
@@ -19,5 +25,11 @@
     .navCartMenu__item {
 
     }
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .navCart {
+    display: block;
   }
 }

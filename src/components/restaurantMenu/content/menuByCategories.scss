@@ -1,13 +1,33 @@
-.menuByCategories{
+@import "../../productCard/mixins/smallProductCard";
+
+.menuByCategories {
   display: flex;
   flex-direction: column;
 
-  .menuByCategories__header{
+  .menuByCategories__header {
     padding: 1em .5em;
   }
-  .menuByCategories__productList{
+
+  .menuByCategories__productList {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    .productList__productListItem{
+
+    }
   }
+
+}
+
+@media screen and (max-width: 800px) {
+  .menuByCategories {
+    .menuByCategories__productList {
+      .productList__productListItem {
+        width: 100%;
+        @include smallProductCard
+      }
+
+    }
+  }
+
 }

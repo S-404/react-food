@@ -26,11 +26,15 @@ const MenuByCategories = ({category, menuItems}) => {
             <h3 className='menuByCategories__header'>{category}</h3>
             <div className='menuByCategories__productList'>
                 {menuItems.map(item => (
-                    <ProductCard
+                    <div
                         key={`filteredMenu_productCard_${item.id}`}
-                        product={item}
-                        isVisible={isVisible}
-                    />
+                        className='productList__productListItem'
+                    >
+                        <ProductCard
+                            product={item}
+                            isVisible={isVisible}
+                        />
+                    </div>
                 ))}
             </div>
         </div>

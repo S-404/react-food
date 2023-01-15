@@ -16,7 +16,6 @@
     height: calc(100vh - 130px);
     overflow-y: scroll;
     padding-right: .5em;
-
     .RestaurantMenu__contentItem{
       height: 100px;
     }
@@ -35,4 +34,22 @@
     position: sticky;
     margin: 0 1em .5em;
   }
+}
+
+
+@media screen and (max-width: 1400px) {
+  .RestaurantMenu{
+    .RestaurantMenu__cart {
+      display: none;
+    }
+    .RestaurantMenu__content{
+      width: 100%;
+      flex-basis: 90%;
+    }
+    .RestaurantMenu__leftMenu {
+      margin-left: .3em;
+      flex-basis: 220px;
+    }
+  }
+
 }

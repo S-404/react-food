@@ -1,0 +1,53 @@
+@mixin defaultProductCard {
+  .productCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background-color: white;
+    border-radius: var(--border-radius-val);
+    width: calc(170px + 1em);
+    padding: 1em;
+    margin: 0 .5em .5em 0;
+    min-height: 300px;
+
+    .productCard__productData {
+      &:hover {
+        cursor: pointer;
+      }
+
+      .productData__imageDiv {
+        img {
+          width: calc(170px - 1em);
+          border-radius: var(--border-radius-val);
+          min-height: 115px;
+        }
+      }
+
+      .productData__textInfo {
+        display: flex;
+        flex-direction: column;
+
+        .textInfo__price {
+          font-size: 1.2em;
+        }
+
+        .textInfo__name {
+          font-size: 0.9em;
+        }
+
+        .textInfo__weight {
+          font-size: 0.8em;
+          color: gray;
+        }
+      }
+
+    }
+
+    .productCard__buttons {
+      margin-top: 1em;
+
+    }
+  }
+}
+
