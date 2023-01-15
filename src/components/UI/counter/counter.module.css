@@ -14,7 +14,7 @@
     min-width: 30px;
     padding: .5em;
     text-align: center;
-    background-color: white;
+    background-color: #f0f0f0;
     font-weight: 500;
     border-radius: var(--border-radius-val);
 
@@ -24,12 +24,12 @@
 }
 .counter__button:hover{
     cursor: pointer;
-    background-color: #ffffff;
+    background-color: #d3d3d3;
 
 }
 
 .counter__button:active {
-    background-color: #d3d3d3;
+    background-color: #e0e0e0;
 }
 
 .counter__value{

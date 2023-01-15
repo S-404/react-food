@@ -1,5 +1,6 @@
 .cartItem {
   margin-bottom: .2em;
+
   .productCard {
     width: 100%;
     display: flex;
@@ -7,6 +8,7 @@
     min-height: 0;
     padding: .5em;
     margin: 0;
+    border: 1px solid #efefef;
     .productCard__productData {
       display: flex;
       flex-direction: row;

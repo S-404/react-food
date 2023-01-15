@@ -1,5 +1,5 @@
 .button {
-    background-color: white;
+    background-color: #f0f0f0;
     padding: .5em;
     text-align: center;
     border-radius: var(--border-radius-val);
@@ -9,10 +9,10 @@
 }
 
 .button:hover {
-    background-color: #ffffff;
+    background-color: #d3d3d3;
     cursor: pointer;
 }
 
 .button:active {
-    background-color: #d3d3d3;
+    background-color: #e0e0e0;
 }

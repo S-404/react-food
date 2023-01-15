@@ -2,7 +2,7 @@
   margin-right: 20px;
 
   .menuCategories__header {
-
+    margin-bottom: 1em;
   }
 
   .menuCategories__categoriesList {
@@ -10,13 +10,12 @@
       .categoriesList__item {
         padding: 1em 1em;
         border-radius: var(--border-radius-val);
-
         &:hover {
-          background-color: #f3f3f3;
+          background-color: #ffffff;
           cursor: pointer;
         }
         &:active{
-          background-color: #f0f0f0;
+          background-color: #d0d0d0;
         }
       }
     }
