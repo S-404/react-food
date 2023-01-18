@@ -6,7 +6,7 @@
     left: 0;
     display: none;
     background: rgba(0, 0, 0, 0.5);
-    z-index: 1;
+    z-index: 1000;
     overflow-y: unset;
 }
 
@@ -34,7 +34,7 @@
 @media screen and (max-width: 800px){
 
     .myModalContent {
-        margin-top: 0;
+        margin-top: 1em;
         width: 100%;
     }
 }

@@ -5,7 +5,7 @@ const MenuCategories = () => {
 
     return (
         <div className='menuCategories'>
-            <h3 className='menuCategories__header'>Меню</h3>
+            <h3 className='menuCategories__header'>{'Меню'}</h3>
             <div className='menuCategories__categoriesList'>
                 <CategoriesList/>
             </div>

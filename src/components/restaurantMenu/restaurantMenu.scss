@@ -3,48 +3,55 @@
   justify-content: center;
 
   .RestaurantMenu__leftMenu {
-    display: block; //todo @media block/none
-    top:90px;
+    display: block;
+    top: 90px;
     width: 220px;
     height: calc(100vh - 130px);
-    position: sticky;
+    overflow-y: scroll;
+    margin-right: .5em;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
   }
 
   .RestaurantMenu__content {
-    width: 892px; //todo @media 1200/800
+    width: 892px;
     max-width: 1000px;
     height: calc(100vh - 130px);
     overflow-y: scroll;
     padding-right: .5em;
-    .RestaurantMenu__contentItem{
+
+    .RestaurantMenu__contentItem {
       height: 100px;
     }
   }
 
   .RestaurantMenu__cart {
     border-radius: var(--border-radius-val);
-    box-shadow:
-            0 0  0 2px rgb(255,255,255),
-            0.3em 0.3em 1em rgba(0,0,0,0.3);
+    box-shadow: 0 0 0 2px rgb(255, 255, 255),
+    0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
 
-    display: block; //todo @media block/none
-    top:90px;
+    display: block;
+    top: 90px;
     width: 380px;
-    position: sticky;
     margin: 0 1em .5em;
   }
 }
 
 
 @media screen and (max-width: 1500px) {
-  .RestaurantMenu{
+  .RestaurantMenu {
     .RestaurantMenu__cart {
       display: none;
     }
-    .RestaurantMenu__content{
+
+    .RestaurantMenu__content {
       width: 100%;
       flex-basis: 90%;
     }
+
     .RestaurantMenu__leftMenu {
       margin-left: .3em;
       flex-basis: 220px;
@@ -54,7 +61,14 @@
 }
 
 @media screen and (max-width: 800px) {
-  .RestaurantMenu{
+  .RestaurantMenu {
+    .RestaurantMenu__content{
+      flex-basis: 100%;
+      padding: .1em;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
     .RestaurantMenu__leftMenu {
       display: none;
     }
