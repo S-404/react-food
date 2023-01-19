@@ -18,7 +18,7 @@
 }
 
 .myModalContent {
-    margin-top: 10px;
+    min-width: 600px;
     padding: 15px;
     background: white;
     border-radius: var(--border-radius-val);
@@ -34,7 +34,7 @@
 @media screen and (max-width: 800px){
 
     .myModalContent {
-        margin-top: 1em;
+        min-width: unset;
         width: 100%;
     }
 }

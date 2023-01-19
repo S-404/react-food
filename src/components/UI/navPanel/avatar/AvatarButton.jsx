@@ -1,9 +1,9 @@
 import React from 'react';
-
+import FaceIcon from '@mui/icons-material/Face';
 const AvatarButton = () => {
     return (
         <div>
-            Avatar
+            <FaceIcon/>
         </div>
     );
 };

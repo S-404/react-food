@@ -52,12 +52,14 @@
       }
 
     }
+    .searchRoot__searchSubmitBtn {
 
-
+    }
   }
 
   .myYMaps__mapRoot {
     position: relative;
+
     .mapRoot_placeMark {
       position: absolute;
       top: 50%;
@@ -71,3 +73,24 @@
 
 }
 
+
+@media screen and (max-width: 800px) {
+  .myYMaps {
+    margin: 0;
+    .myYMaps__searchRoot {
+      height: 80px;
+      .searchRoot__searchFieldBox {
+        .searchFieldBox__titleBox {
+          p {
+            white-space: unset;
+          }
+
+          button {
+            align-items: center;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}

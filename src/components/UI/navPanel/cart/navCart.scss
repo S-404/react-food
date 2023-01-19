@@ -34,6 +34,9 @@
 @media screen and (max-width: 1500px) {
   .navCart {
     display: block;
+    .navCart__navCartMenu{
+      min-width: unset;
+    }
   }
 }
 
