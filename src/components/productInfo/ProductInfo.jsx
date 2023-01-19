@@ -1,36 +1,49 @@
-import React from 'react';
+import React, {useMemo} from 'react';
 import {useSelector} from "react-redux";
 import './productInfo.scss'
-import Button from "../UI/buttons/button/Button";
+import useProductInCart from "../../hooks/useProductInCart";
+import ProductAddButton from "../productAddButton/ProductAddButton";
+import ProductCounter from "../productCounter/ProductCounter";
+import ProductCardImg from "../productCard/ProductCardImg";
 
 const ProductInfo = () => {
-    const selectedProduct = useSelector(state => state.restaurant.selectedProduct)
-    const addButtonClickHandler = () => {
+    const storeCurrency = useSelector(state => state.restaurant.data?.currency)
+    const cartItems = useSelector(state => state.cart.cartItems)
+    const product = useSelector(state => state.restaurant.selectedProduct)
+    const productInCart = useProductInCart(product, cartItems)
 
-    }
-    if (!selectedProduct.id) return null
+    const totalPrice = useMemo(() => {
+        return productInCart.id ?
+            productInCart.price * productInCart.cartItemQty : 0
+    }, [productInCart.cartItemQty, product])
+
+    if (!product.id) return null
     return (
         <div className='productInfo'>
             <div className='productInfo__info'>
+                <div className='info__imageDiv'>
+                    <ProductCardImg product={product}/>
+                </div>
                 <div className='info__description'>
-                    <p dangerouslySetInnerHTML={{__html: selectedProduct.description}}/>
+                    <p dangerouslySetInnerHTML={{__html: product.description}}/>
                 </div>
             </div>
             <div className='productInfo__productInfoFooter'>
                 <div className='productInfoFooter__buttons'>
-                    <div className='buttons__button'>
-                        <Button
-                            text={'+ Добавить'}
-                            onClick={addButtonClickHandler}
-                        />
-                    </div>
-                    <div className='buttons__button'>
-                        counter
-                    </div>
+                    {productInCart.id ?
+                        <div className='buttons__button'>
+                            <ProductCounter product={productInCart}/>
+                        </div>
+                        :
+                        <div className='buttons__button'>
+                            <ProductAddButton product={product}/>
+                        </div>
+                    }
+
                 </div>
 
                 <div className='productInfoFooter__amount'>
-                    <span>Amount</span>
+                    <span>{`${totalPrice} ${storeCurrency}`}</span>
                 </div>
             </div>
 
