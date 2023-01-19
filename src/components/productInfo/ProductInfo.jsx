@@ -7,15 +7,14 @@ import ProductCounter from "../productCounter/ProductCounter";
 import ProductCardImg from "../productCard/ProductCardImg";
 
 const ProductInfo = () => {
-    const storeCurrency = useSelector(state => state.restaurant.data?.currency)
+    const storeCurrency = useSelector(state => state.restaurant.data?.currency || '')
     const cartItems = useSelector(state => state.cart.cartItems)
     const product = useSelector(state => state.restaurant.selectedProduct)
     const productInCart = useProductInCart(product, cartItems)
 
     const totalPrice = useMemo(() => {
-        return productInCart.id ?
-            productInCart.price * productInCart.cartItemQty : 0
-    }, [productInCart.cartItemQty, product])
+        return (product.price || 0) * (productInCart.cartItemQty || 0)
+    }, [productInCart.cartItemQty])
 
     if (!product.id) return null
     return (
