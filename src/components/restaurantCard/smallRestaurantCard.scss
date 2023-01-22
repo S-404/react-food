@@ -1,0 +1,26 @@
+@mixin smallRestaurantCard {
+  .restaurantCard {
+    //height: 100px;
+    height: 100px;
+    width: 600px;
+
+    img {
+
+    }
+
+    .restaurantCard__infoLayout {
+      .infoLayout__info {
+        max-width: 100%;
+
+        .infoLayout__name {
+
+        }
+
+        .infoLayout__description {
+          display: none;
+        }
+      }
+    }
+  }
+
+}
