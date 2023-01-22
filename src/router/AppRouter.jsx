@@ -15,7 +15,7 @@ const AppRouter = () => {
             element: <Restaurant/>,
             errorElement: <div>{'Такой страницы не найдено'}</div>,
         },
-        {path: 'r/*', element: <Restaurants/>}
+        {path: '*', element: <Restaurants/>}
 
     ])
 
