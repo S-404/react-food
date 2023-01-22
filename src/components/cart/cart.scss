@@ -1,3 +1,5 @@
+@import "src/components/UI/buttons/button/mixins/yellowButton";
+
 .cart {
   height: calc(100vh - 130px);
   background-color: #fff;
@@ -41,26 +43,9 @@
 
   .cart__cartBottom {
     flex-basis: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: yellow;
+    @include yellowButton;
     font-weight: 600;
-    padding: 1em;
     margin: 1em;
-    border: 1px solid #eeeeee;
-    border-radius: var(--border-radius-val);
 
-    -webkit-user-select: none; /* Safari */
-    -ms-user-select: none; /* IE 10 and IE 11 */
-    user-select: none; /* Standard syntax */
-    &:hover {
-      cursor: pointer;
-      background-color: #ffe505;
-    }
-
-    &:active {
-      background-color: #efefa2;
-    }
   }
 }

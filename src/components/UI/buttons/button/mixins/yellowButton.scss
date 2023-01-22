@@ -1,0 +1,22 @@
+@mixin yellowButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: yellow;
+  border-radius: var(--border-radius-val);
+  padding: .5em;
+  border: 1px solid #eeeeee;
+
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+
+  &:hover {
+    cursor: pointer;
+    background-color: #ffe505;
+  }
+
+  &:active {
+    background-color: #efefa2;
+  }
+}
