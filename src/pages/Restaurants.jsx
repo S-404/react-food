@@ -1,9 +1,10 @@
 import React from 'react';
+import RestaurantsList from "../components/restaurantsList/RestaurantsList";
 
 const Restaurants = () => {
     return (
         <div>
-            restaurants
+           <RestaurantsList/>
         </div>
     );
 };

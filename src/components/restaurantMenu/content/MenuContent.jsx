@@ -10,6 +10,7 @@ import {useDispatch, useSelector} from "react-redux";
 const MenuContent = () => {
     const productInfoVisibility = useSelector(state => state.modals.productInfo)
     const selectedProduct = useSelector(state => state.restaurant.selectedProduct)
+    const restaurantData = useSelector(state => state.restaurant.data)
     const dispatch = useDispatch()
     const setProductInfoVisibility = (value) => {
         dispatch(setProductInfoVisible(value))
@@ -17,7 +18,7 @@ const MenuContent = () => {
 
     return (
         <div>
-            <RestaurantCard/>
+            <RestaurantCard restaurantData={restaurantData}/>
             <RestaurantOffer/>
             <MenuByCategoriesList/>
             <Modal

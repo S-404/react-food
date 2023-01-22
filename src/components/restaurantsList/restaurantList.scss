@@ -1,0 +1,17 @@
+@import "src/components/restaurantCard/smallRestaurantCard";
+
+.restaurantList {
+  .restaurantList__header {
+  margin: 3em 0;
+  }
+
+  .restaurantList__item {
+    margin-bottom: 2em;
+    @include smallRestaurantCard;
+
+    &:hover {
+      cursor: pointer;
+      scale: 1.1;
+    }
+  }
+}
