@@ -23,4 +23,18 @@
     }
   }
 
+  @media screen and (max-width: 1000px) {
+    .restaurantCard{
+      width: 100%;
+      .restaurantCard__infoLayout{
+        .infoLayout__info{
+          //max-width: 100%;
+          .infoLayout__name{
+            font-size: 30px;
+          }
+        }
+      }
+    }
+  }
+
 }
