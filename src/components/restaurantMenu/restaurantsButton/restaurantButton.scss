@@ -1,0 +1,7 @@
+@import "src/components/UI/buttons/button/mixins/yellowButton";
+
+.restaurantsButton{
+  @include yellowButton
+}
+
+

@@ -6,6 +6,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {setNavMenuVisible} from "../../../../store/toolKitRedux/modalsSlice";
 import Modal from "../../modal/Modal";
 import CategoriesList from "../../../restaurantMenu/categories/categoriesList/CategoriesList";
+import RestaurantsButton from "../../../restaurantMenu/restaurantsButton/RestaurantsButton";
 
 const NavMenuButton = () => {
     const dispatch = useDispatch()
@@ -34,6 +35,7 @@ const NavMenuButton = () => {
                     className='navMenu__modalContent'
                     onClick={() => onClickButtonHandler(false)}
                 >
+                    <RestaurantsButton/>
                     <CategoriesList/>
                 </div>
 
