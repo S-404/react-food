@@ -1,6 +1,9 @@
 import {mockAPI} from "../MockApi";
 
 export default class RestaurantService {
+    static async getRestaurantList(){
+        return await mockAPI.getRestaurantList()
+    }
     static async getRestaurantMenu(restaurantId) {
         return await mockAPI.getRestaurantMenu(restaurantId)
     }

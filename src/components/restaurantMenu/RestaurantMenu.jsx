@@ -24,7 +24,7 @@ const RestaurantMenu = () => {
         }
 
         fetchData()
-    }, [])
+    }, [selectedRestaurantId])
 
     if (isFetchMenuLoading) return <div>loading...</div>
 
