@@ -7,17 +7,20 @@ const AppRouter = () => {
 
     const router = createBrowserRouter([
         {
-            path: 'r/list',
+            path: '/r/list',
             element: <Restaurants/>,
         },
         {
-            path: 'r/menu/:id/',
+            path: '/r/menu/:id/',
             element: <Restaurant/>,
             errorElement: <div>{'Такой страницы не найдено'}</div>,
         },
-        {path: '*', element: <Restaurants/>}
+        {
+            path: '/*',
+            element: <Restaurants/>,
+        }
 
-    ])
+    ], {basename:'/react-food'})
 
     return <RouterProvider router={router}/>
 
