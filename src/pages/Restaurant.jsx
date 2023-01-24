@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 import DefaultLayout from "../components/defaultLayout/DefaultLayout";
-import {setData} from "../store/toolKitRedux/restaurantSlice";
+import {setSelectedRestaurant} from "../store/toolKitRedux/restaurantSlice";
 import RestaurantService from "../api/services/RestaurantService";
 import {useDispatch} from "react-redux";
 import {useFetching} from "../hooks/useFetching";
@@ -13,7 +13,7 @@ const Restaurant = () => {
 
     const [fetchRestaurantMenu] = useFetching(async () => {
         const list = await RestaurantService.getRestaurantData(params.id)
-        dispatch(setData(list))
+        dispatch(setSelectedRestaurant(list))
     })
     useEffect(() => {
         async function fetchData() {
@@ -21,7 +21,7 @@ const Restaurant = () => {
         }
 
         fetchData()
-    }, [])
+    }, [params])
 
     return (
         <div>
