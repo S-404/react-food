@@ -11,6 +11,7 @@ const ProductInfo = () => {
     const cartItems = useSelector(state => state.cart.cartItems)
     const product = useSelector(state => state.restaurant.selectedProduct)
     const productInCart = useProductInCart(product, cartItems)
+    const loadingStatus = useSelector(state => state.cart.status)
 
     const totalPrice = useMemo(() => {
         return (product.price || 0) * (productInCart.cartItemQty || 0)
@@ -31,11 +32,17 @@ const ProductInfo = () => {
                 <div className='productInfoFooter__buttons'>
                     {productInCart.id ?
                         <div className='buttons__button'>
-                            <ProductCounter product={productInCart}/>
+                            <ProductCounter
+                                product={productInCart}
+                                disabled={loadingStatus === 'loading'}
+                            />
                         </div>
                         :
                         <div className='buttons__button'>
-                            <ProductAddButton product={product}/>
+                            <ProductAddButton
+                                product={product}
+                                disabled={loadingStatus === 'loading'}
+                            />
                         </div>
                     }
 

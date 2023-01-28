@@ -11,6 +11,7 @@ import useProductInCart from "../../hooks/useProductInCart";
 const ProductCard = ({product, isVisible, showAmount}) => {
     const storeCurrency = useSelector(state => state.restaurant.data?.currency)
     const cartItems = useSelector(state => state.cart.cartItems)
+    const loadingStatus = useSelector(state => state.cart.status)
     const dispatch = useDispatch()
     const productDataClickHandler = () => {
         dispatch(setProductInfoVisible(true))
@@ -44,9 +45,15 @@ const ProductCard = ({product, isVisible, showAmount}) => {
             </div>
             <div className='productCard__buttons'>
                 {productInCart.id ?
-                    <ProductCounter product={productInCart}/>
+                    <ProductCounter
+                        product={productInCart}
+                        disabled={loadingStatus === 'loading'}
+                    />
                     :
-                    <ProductAddButton product={product}/>
+                    <ProductAddButton
+                        product={product}
+                        disabled={loadingStatus === 'loading'}
+                    />
                 }
             </div>
 
