@@ -48,6 +48,9 @@
     @include yellowButton;
     font-weight: 600;
     margin: 1em;
-
+    &_disabled{
+      color: gray;
+    }
   }
+
 }
