@@ -25,20 +25,22 @@ export const mockAPI = {
         return Promise.resolve(result)
     }),
 
-    addToCart: (product) => delay(500).then(()=>{
+    getCartItems: () => delay(500).then(() => Promise.resolve([])),
+
+    addToCart: (product) => delay(500).then(() => {
         //smth billing logic
         return Promise.resolve(product)
     }),
-    removeFromCart: (product) => delay(500).then(()=>{
+    removeFromCart: (product) => delay(500).then(() => {
         //smth billing logic
         return Promise.resolve(product)
     }),
-    clearCart: () => delay(500).then(()=>{
+    clearCart: () => delay(500).then(() => {
         //smth billing logic
         let emptyCart = []
         return Promise.resolve(emptyCart)
     }),
-    recalculateTotalAmount: ({cartItems, selectedRestaurant})=> delay(500).then(()=>{
+    recalculateTotalAmount: ({cartItems, selectedRestaurant}) => delay(500).then(() => {
         //smth billing logic
         let result = {amount: 0, discount: 0, delivery: 0, totalAmount: 0}
         return Promise.resolve(result)
