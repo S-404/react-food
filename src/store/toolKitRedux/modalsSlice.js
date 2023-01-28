@@ -5,7 +5,8 @@ const initialState = {
     locationVisible: false,
     navCartMenu: false,
     productInfo: false,
-    navMenu: false
+    navMenu: false,
+    purchase: false,
 }
 
 const modalsSlice = createSlice({
@@ -23,7 +24,10 @@ const modalsSlice = createSlice({
         },
         setProductInfoVisible: (state, action) => {
             state.productInfo = action.payload
-        }
+        },
+        setPurchaseVisible: (state, action) => {
+            state.purchase = action.payload
+        },
     }
 })
 
@@ -32,5 +36,6 @@ export const {
     setLocationVisible,
     setNavCartMenuVisible,
     setProductInfoVisible,
-    setNavMenuVisible
+    setNavMenuVisible,
+    setPurchaseVisible,
 } = modalsSlice.actions

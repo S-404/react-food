@@ -3,15 +3,19 @@ import {useDispatch} from "react-redux";
 import {addToCart, removeFromCart} from "../../store/toolKitRedux/cartSlice";
 import Counter from "../UI/counter/Counter";
 
-const ProductCounter = ({product}) => {
+const ProductCounter = ({product, disabled}) => {
 
     const dispatch = useDispatch()
 
     const increment = () => {
-        dispatch(addToCart(product))
+        if(!disabled){
+            dispatch(addToCart(product))
+        }
     }
     const decrement = () => {
-        dispatch(removeFromCart(product))
+        if(!disabled){
+            dispatch(removeFromCart(product))
+        }
     }
 
     return (
@@ -20,6 +24,7 @@ const ProductCounter = ({product}) => {
                 value={product.cartItemQty}
                 increment={increment}
                 decrement={decrement}
+                disabled={disabled}
             />
         </div>
     );
