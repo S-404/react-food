@@ -1,18 +1,18 @@
 import React from 'react';
-import {useDispatch, useSelector} from "react-redux";
+import {useSelector} from "react-redux";
 import {useTotalAmount} from "../../../hooks/useProductInCart";
 import CartAmount from "../cartAmount/CartAmount";
-import {setPurchaseVisible} from "../../../store/toolKitRedux/modalsSlice";
+import {useNavigate} from "react-router-dom";
 
 const CartBottom = () => {
     const cartItems = useSelector(state => state.cart.cartItems)
     const loadingStatus = useSelector(state => state.cart.status)
     const totalAmount = useTotalAmount(cartItems)
-    const dispatch = useDispatch()
+    const navigate = useNavigate();
 
     const onClickHandler = () => {
         if (loadingStatus === 'idle') {
-            dispatch(setPurchaseVisible(true))
+            navigate(`/r/purchase`)
         }
     }
 
