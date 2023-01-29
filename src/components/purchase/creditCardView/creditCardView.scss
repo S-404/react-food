@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css?family=Homemade+Apple&display=swap');
+
+@mixin credit-card-side {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 1em;
+  background: linear-gradient(to top right, #cc8d01 0%, #ffe09a 100%);
+  padding: 20px;
+}
+
+.credit-card {
+  width: 380px;
+  height: 210px;
+  perspective: 1000px;
+  background-color: transparent;
+
+  .credit-card__inner_flipped{
+    transform: rotateY(180deg)
+  }
+  .credit-card__inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+
+    .credit-card__front {
+      @include credit-card-side;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .card-type {
+        text-align: right;
+        height: 40px;
+      }
+
+      .card-number {
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 25px;
+        text-align: center;
+        height: 30px;
+        display: inline-block;
+      }
+
+      .card-expiration {
+        display: flex;
+        align-items: center;
+        font-size: 20px;
+        margin-left: 50%;
+        height: 20px;
+
+        p {
+          padding: 0;
+          margin: 0;
+        }
+
+        .valid {
+          font-size: 7.5px;
+          width: 25px;
+          display: inline-block;
+          margin-top: 1px;
+        }
+      }
+
+      .card-holder-name {
+        font-size: 20px;
+        height: 20px;
+        display: inline-block;
+      }
+    }
+
+    .credit-card__back {
+      @include credit-card-side;
+      transform: rotateY(180deg);
+      margin: 0;
+      .card-stripe {
+        position: absolute;
+        width: 100%;
+        background-color: black;
+        height: 45px;
+        margin-top: 20px;
+        margin-left: -20px;
+      }
+      .card-sig-container {
+        margin-top: 120px;
+        padding: 0 .5em;
+        background-color: white;
+        color: black;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 50px;
+        .signature {
+          font-family: 'Homemade Apple', cursive;
+          text-transform: lowercase;
+          overflow: hidden;
+          z-index: 9999;
+        }
+      }
+    }
+
+  }
+
+
+
+}
+
+
+
+
+
+
+
+
