@@ -1,0 +1,40 @@
+.card-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  input::placeholder {
+    font-weight: 100;
+  }
+  .input-label {
+    font-size:12px;
+    margin-top:10px;
+    margin-left: 5px;
+    margin-bottom: -10px;
+    color: gray;
+  }
+  .text-input {
+    padding: .4em 0;
+    border: 0;
+    font-size: 20px;
+    margin:5px;
+    outline: none;
+    background-color: transparent;
+    color: black;
+    border-bottom: 1px solid #565656;
+    font-weight: 200;
+  }
+  .date-and-csv{
+    display: flex;
+    flex-direction: column;
+    .date-and-csv__date, .date-and-csv__cvc{
+      display: flex;
+      flex-direction: column;
+
+    }
+  }
+}
+
+
+
+
+
