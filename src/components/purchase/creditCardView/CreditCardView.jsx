@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useMemo} from 'react';
 import {useDispatch, useSelector} from "react-redux";
 import {setCreditCardFlip} from "../../../store/toolKitRedux/userDataSlice";
 import './creditCardView.scss'
@@ -9,6 +9,15 @@ const CreditCardView = () => {
     const flipCard = () => {
         dispatch(setCreditCardFlip(!creditCard.flip))
     };
+    const splitCardNumber = useMemo(() => {
+        let number = creditCard.cardNumber
+        let result = ''
+        for (let x = 0; x < number.length; x++) {
+            if (x % 4 === 0) result += ' '
+            result += number[x]
+        }
+        return result
+    },[creditCard.cardNumber])
     return (
         <div className="credit-card"
              onClick={flipCard}
@@ -17,7 +26,7 @@ const CreditCardView = () => {
                 <div className="credit-card__front">
 
                     <div className="card-type">{creditCard.cardType}</div>
-                    <div className="card-number">{creditCard.cardNumber}</div>
+                    <div className="card-number">{splitCardNumber}</div>
 
                     <div className="card-expiration">
                         {creditCard.cardExpirationDate !== "" &&

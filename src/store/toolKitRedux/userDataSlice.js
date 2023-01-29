@@ -6,7 +6,7 @@ const initialState = {
     lang: "ru",
     availableLang: ['en', 'ru'],
     creditCard: {
-        cardNumber: "0000 0000 0000 0000",
+        cardNumber: "0000000000000000",
         cardHolderName: "NAME SURNAME",
         cardExpirationDate: "0000 00",
         cardCVV: "000",
