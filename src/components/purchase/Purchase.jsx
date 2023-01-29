@@ -1,9 +1,14 @@
 import React from 'react';
+import CreditCardView from "./creditCardView/CreditCardView";
+import CreditCardForm from "./creditCardForm/CreditCardForm";
 
 const Purchase = () => {
+
     return (
         <div>
-            Purchase
+            <h1>Purchase</h1>
+            <CreditCardView/>
+            <CreditCardForm/>
         </div>
     );
 };
