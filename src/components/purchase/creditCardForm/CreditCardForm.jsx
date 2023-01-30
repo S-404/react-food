@@ -1,5 +1,7 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {useDispatch, useSelector} from "react-redux";
+import {useWindowSize} from 'react-use'
+import ReactConfetti from "react-confetti";
 import './creditCardForm.scss'
 import {
     setCreditCardCVV,
@@ -13,6 +15,10 @@ import {
 const CreditCardForm = () => {
     const creditCard = useSelector(state => state.userData.creditCard)
     const dispatch = useDispatch()
+    const [submitted, setSubmitted] = useState(false)
+    const {width, height} = useWindowSize()
+
+
     const flipCard = () => {
         dispatch(setCreditCardFlip(true))
     };
@@ -56,7 +62,7 @@ const CreditCardForm = () => {
 
     const onSubmit = (e) => {
         e.preventDefault()
-        console.log('1')
+        setSubmitted(true)
     }
 
     return (
@@ -64,6 +70,12 @@ const CreditCardForm = () => {
             className="card-form"
             onSubmit={(e) => onSubmit(e)}
         >
+            {submitted ?
+                <ReactConfetti
+                    width={width}
+                    height={height}
+                /> :
+                null}
             <label className="input-label">
                 {'Номер карты'}
             </label>
