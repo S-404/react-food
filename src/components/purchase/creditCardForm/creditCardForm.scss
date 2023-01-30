@@ -32,6 +32,14 @@
 
     }
   }
+  .card-form__submit-button{
+    height: 30px;
+    margin: 2em 1em;
+    background-color: yellow;
+    border: 1px solid gray;
+    border-radius: var(--border-radius-val);
+    font-weight: 600;
+  }
 }
 
 
