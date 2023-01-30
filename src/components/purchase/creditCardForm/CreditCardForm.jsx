@@ -70,6 +70,7 @@ const CreditCardForm = () => {
             <input
                 type='text'
                 placeholder={"Введите номер карты"}
+                value={creditCard.cardNumber}
                 id="number-input"
                 name="number-input"
                 className="text-input"
