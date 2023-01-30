@@ -53,8 +53,17 @@ const CreditCardForm = () => {
         let cardCVV = e.target.value;
         dispatch(setCreditCardCVV(cardCVV))
     };
+
+    const onSubmit = (e) => {
+        e.preventDefault()
+        console.log('1')
+    }
+
     return (
-        <form className="card-form">
+        <form
+            className="card-form"
+            onSubmit={(e) => onSubmit(e)}
+        >
             <label className="input-label">
                 {'Номер карты'}
             </label>
@@ -78,7 +87,7 @@ const CreditCardForm = () => {
                 className="text-input"
                 maxLength="30"
             />
-            <div className="date-and-csv" >
+            <div className="date-and-csv">
                 <div className='date-and-csv__date'>
                     <label className="input-label">
                         {'Срок действия карты'}
@@ -106,6 +115,13 @@ const CreditCardForm = () => {
                     />
                 </div>
             </div>
+
+            <button
+                className='card-form__submit-button'
+                type='submit'
+            >
+                {'Оплатить'}
+            </button>
         </form>
     );
 };
