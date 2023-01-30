@@ -1,5 +1,12 @@
 .purchase{
   margin: 1em;
+  .purchase__back-button{
+    display: flex;
+    padding: 1em 0;
+    div{
+      background-color: #cccccc;
+    }
+  }
   .purchase__header{
 
   }

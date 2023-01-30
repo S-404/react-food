@@ -39,6 +39,9 @@
     border: 1px solid gray;
     border-radius: var(--border-radius-val);
     font-weight: 600;
+    &:active{
+      background-color: white;
+    }
   }
 }
 

@@ -13,10 +13,13 @@ const Purchase = () => {
 
     return (
         <div className='purchase'>
-            <Button
-                text={'<Назад'}
-                onClick={backButtonClickHandler}
-            />
+            <div className='purchase__back-button'>
+                <Button
+                    text={'Вернуться к покупкам'}
+                    onClick={backButtonClickHandler}
+                />
+            </div>
+
             <h1 className='purchase__header'>{'Оплата'}</h1>
             <div className='purchase__credit-card'>
                 <CreditCardView/>
