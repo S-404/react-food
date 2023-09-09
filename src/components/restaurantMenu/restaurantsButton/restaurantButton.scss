@@ -1,7 +1,15 @@
 @import "src/components/UI/buttons/button/mixins/yellowButton";
 
 .restaurantsButton{
-  @include yellowButton
+  @include yellowButton;
+
+  .restaurantsButton__arrow{
+    scale: 0.6;
+  }
+  .restaurantsButton__text{
+    font-size: small;
+    text-align: start;
+  }
 }
 
 

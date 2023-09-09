@@ -9,7 +9,7 @@
     width: calc(170px + 1em);
     padding: 1em;
     margin: 0 .5em .5em 0;
-    min-height: 300px;
+    min-height: 320px;
 
     .productCard__productData {
       &:hover {
@@ -17,6 +17,8 @@
       }
 
       .productData__imageDiv {
+        display: flex;
+        align-items: center;
         img {
           width: calc(170px - 1em);
           border-radius: var(--border-radius-val);
@@ -34,10 +36,23 @@
 
         .textInfo__name {
           font-size: 0.9em;
+          min-height: 2.5em;
+          max-height: 2.5em;
+
+          span {
+            max-height: 2lh;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            -webkit-line-clamp: 2;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+          }
+
         }
 
         .textInfo__weight {
           font-size: 0.8em;
+          min-height: 1.5em;
           color: gray;
         }
       }

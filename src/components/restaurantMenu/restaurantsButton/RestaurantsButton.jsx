@@ -13,8 +13,17 @@ const RestaurantsButton = () => {
             className='restaurantsButton'
             onClick={itemClickHandler}
         >
-            <ArrowBackIosIcon/>
-            {'К списку ресторанов'}
+            <div
+                className="restaurantsButton__arrow"
+            >
+                <ArrowBackIosIcon/>
+            </div>
+
+            <span
+                className="restaurantsButton__text"
+            >
+                {'К списку ресторанов'}
+            </span>
         </div>
     );
 };
